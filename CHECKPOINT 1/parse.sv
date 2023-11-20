@@ -1,10 +1,10 @@
 module checkpoint1;
 string file_input;
 string line;
-																										//string user_input;
+														
 integer file;
 integer parse;
-																										//string command;
+										
 int core;
 int time_a;
 int oop;
@@ -15,14 +15,14 @@ bit [35:0] addr;
 
 file_input = "default_trace_file.txt";
 
-    // Check if a user-specified file name is provided as a command-line argument
+    
     if ($value$plusargs("NAME_OF_THE_FILE=%s", file_input) == 0) begin
       $display("User has not specified any file. Executing default file: %s", file_input);
     end else begin
       $display("Opening user-specified file: %s", file_input);
     end
 
- // Open the file for reading
+
     file = $fopen(file_input, "r");
     if (file == 0) begin
       $display("Error: Could not open the file: %s", file_input);
