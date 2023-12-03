@@ -470,7 +470,7 @@ initial
 						
 						forever
 						begin
-						@(posedge clock)
+						@(clock)
 							if(my_queue.size() == 0)
 							begin
 								if (clock_count==temp_clock_count)
